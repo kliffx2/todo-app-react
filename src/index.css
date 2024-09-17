@@ -1,13 +1,131 @@
 body {
+  background: rgb(2,132,81);
+  background: linear-gradient(90deg, rgba(2,132,81,1) 0%, rgba(5,176,100,1) 11%, rgba(7,138,105,1) 52%, rgba(0,212,255,1) 100%);  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todo-list {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  width: 20%;
+}
+
+.add-button:hover {
+  background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button {
+  color: white;
+  background-color: hsl(207, 90%, 64%);
+}
+
+.delete-button:hover {
+  background-color: hsl(207, 90%, 54%);
+}
+
+.edit-button {
+  background-color: forestgreen;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: lawngreen;
+}
+
+ol {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 10px;
+  border: 1px solid hsla(0, 0%, 85%, 0.75);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.move-button, .delete-button, .edit-button, .done-button, .undo-button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.move-button {
+  background-color: lightgray;
+}
+
+.move-button:hover {
+  background-color: gray;
+}
+
+.text.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.done-button {
+  background-color: lightcoral;
+}
+
+.done-button:hover {
+  background-color: crimson;
+}
+.undo-button {
+  background-color: lightblue;
+}
+
+.undo-button:hover {
+  background-color: deepskyblue;
 }
